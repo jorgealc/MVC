@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Album>
+@{
+    ViewBag.Title = "Election";
+    
+}
+
+@using (Html.BeginForm())
+{
+        @Html.AntiForgeryToken()
+    
+       <table class="table">
+        
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Selecciona)
+        </th>
+        <th>
+            
+           @Html.DisplayNameFor(model => model.Artist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </th>
+        <th></th>
+    </tr>
+           </table>
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" value="Cargar" />
+}
+    @section Scripts {
+<script src="~/Scripts/App/JavaScript1.js"> </script>
+
+    
+}
+

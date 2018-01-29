@@ -1,0 +1,31 @@
+﻿@model MvcMusicStore.Models.Album
+@{
+    ViewBag.Title = "Album";
+   
+    <table class="table">
+        
+        <tr>
+        <td>
+           @Html.CheckBoxFor(x => x.Selecciona,new { @class = "checkbox" })
+        </td>
+         <td>
+            @Html.DisplayFor(x => x.Artist.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.Genre.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(x =>x.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.AlbumArtUrl)
+        </td>
+    </tr>
+     </table>
+    @Html.HiddenFor(x => x.AlbumId)
+    @Html.HiddenFor(x => x.Title)
+}
+
